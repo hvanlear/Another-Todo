@@ -55,6 +55,7 @@ body {
 
 form {
   text-align: center;
+  margin-right: 50px;
 }
 input {
   width: 18em;
@@ -78,29 +79,60 @@ textarea:focus {
   border: 1px solid rgb(154, 221, 240);
 }
 
-.btn-commit {
+.btn {
   display: inline block;
   background-color: rgba(255, 255, 255, 0);
   border: none;
-  color: rgba(255, 255, 255, 0.815);
   cursor: pointer;
   position: absolute;
   margin-top: 6px;
   margin-left: 15px;
   transition: transform 80ms ease-in-out;
+  outline: none;
+}
+
+.btn-commit {
+  color: rgba(255, 255, 255, 0.815);
 }
 
 .gg-add-r {
   --ggs: 1.5;
 }
 
-.btn-commit:hover {
+.btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.btn-commit:active {
+.btn:active {
   border: none;
   transform: translateY(0.6px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.todo-list {
+  margin-left: 15px;
+  margin-top: 10px;
+  list-style: none;
+}
+
+.todo-item {
+  padding: 30px;
+  font-family: "Crimson Text", serif;
+  letter-spacing: 0.75px;
+  font-size: 1.3em;
+}
+
+hr {
+  margin-right: 10px;
+  margin-top: 10px;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0)
+  );
 }
