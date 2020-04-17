@@ -1,9 +1,6 @@
 const form = document.querySelector(".txt-input-form");
 const input = document.querySelector(".txt-input-field");
 const todoList = document.querySelector(".todo-list");
-const todoItem = document.querySelector(".todo-item");
-const todoId = document.querySelector(".todo-id");
-let i = 0; //cloned element ID
 
 //Event Delegation for  the delete button and strike through
 todoList.addEventListener("click", function (e) {
@@ -17,25 +14,16 @@ todoList.addEventListener("click", function (e) {
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-  todoId.innerText = input.value;
   duplicate();
-  //   const newTodo = document.createElement("li");
-  const removeBtn = document.createElement("button");
-  //   newTodo.classList.add("todo", "todo-item");
-  //   newTodo.innerText = input.value;
-  //   todoList.appendChild(newTodo);
   input.value = "";
 });
 
-const createDelete = () => {
-  const removeBtn = document.createElement("button");
-  removeBtn.classList.add("btn", "btn-delete");
-};
 //function to clone todo item LI
 let duplicate = function () {
-  let clone = todoItem.cloneNode(true);
-  clone.id = "";
-  todoItem.parentNode.appendChild(clone);
+  let content = document.querySelector("template").content;
+  let toDoClone = content.querySelector("span");
+  toDoClone.textContent = input.value;
+  todoList.appendChild(document.importNode(content, true));
 };
 
 //bug if there is nothing on the page the clone will fail.
