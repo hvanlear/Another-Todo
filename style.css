@@ -19,7 +19,11 @@ body {
 .header {
   height: 50vh;
   font-family: Guld-Script, sans-serif;
+<<<<<<< HEAD
   background-image: url(/Media/kendal-hnysCJrPpkc-unsplash.jpg);
+=======
+  background-image: url(media/kendal-hnysCJrPpkc-unsplash.jpg);
+>>>>>>> c4c5f574c2bc2f33f01d1674bb0c883cad8848f3
   background-size: cover;
   background-position: top;
 }
