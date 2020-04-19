@@ -1,6 +1,6 @@
 @font-face {
   font-family: Guld-Script;
-  src: url(/Media/GuldScript_PersonalUseOnly.ttf);
+  src: url(Media/GuldScript_PersonalUseOnly.ttf);
 }
 
 * {
@@ -19,7 +19,7 @@ body {
 .header {
   height: 50vh;
   font-family: Guld-Script, sans-serif;
-  background-image: url(/Media/hero.jpg);
+  background-image: url(Media/hero.jpg);
   background-size: cover;
   background-position: top;
 }
