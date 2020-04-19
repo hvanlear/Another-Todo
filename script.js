@@ -5,10 +5,17 @@ const todoList = document.querySelector(".todo-list");
 //Event Delegation for  the delete button and strike through
 todoList.addEventListener("click", function (e) {
   if (e.target.classList.value === "gg-remove-r") {
-    e.target.parentElement.parentElement.remove();
+    e.target.parentElement.parentElement.parentElement.remove();
   } else if (e.target.tagName === "SPAN") {
-    e.target.classList.add("strike");
-    console.log("you clicked a item");
+    if (!e.target.classList.contains("strike")) {
+      e.target.classList.toggle("strike");
+    } else {
+      e.target.classList.remove("strike");
+    }
+  } else if (e.target.classList.value === "gg-pen") {
+    // e.target.nextSibling.contentEditable = "true";
+    e.target.parentElement.previousSibling.previousElementSibling.contentEditable =
+      "true";
   }
 });
 
@@ -26,7 +33,7 @@ let duplicate = function () {
   todoList.appendChild(document.importNode(content, true));
 };
 
-//bug if there is nothing on the page the clone will fail.
-//possible fix woould be using the template tag in heml
-//also the chaning li at the top is because there is something already
-//on the screen
+let edit = function () {};
+
+//click
+//selects the closes

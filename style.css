@@ -81,18 +81,27 @@ textarea:focus {
 
 .btn {
   display: inline block;
-  background-color: rgba(255, 255, 255, 0);
+  /* background-color: rgba(255, 255, 255, 0); */
   border: none;
   cursor: pointer;
-  position: absolute;
   margin-top: 6px;
   margin-left: 15px;
   transition: transform 80ms ease-in-out;
   outline: none;
+  background-color: Transparent;
 }
 
 .btn-commit {
   color: rgba(255, 255, 255, 0.815);
+}
+
+.btn-delete {
+  order: 3;
+}
+
+.btn-edit {
+  display: inline-block;
+  bottom: 300px;
 }
 
 .gg-add-r {
@@ -101,13 +110,13 @@ textarea:focus {
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); */
 }
 
 .btn:active {
   border: none;
   transform: translateY(0.6px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); */
 }
 
 .todo-list {
@@ -116,11 +125,25 @@ textarea:focus {
   list-style: none;
 }
 
+.todo-id {
+  cursor: pointer;
+  font-size: 1.8em;
+  padding-top: 5px;
+}
 .todo-item {
   padding: 30px;
   font-family: "Crimson Text", serif;
   letter-spacing: 0.75px;
-  font-size: 1.3em;
+}
+
+i {
+  background-color: none;
+}
+
+.item-box {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
 }
 
 /* animating strike through */
@@ -135,17 +158,20 @@ textarea:focus {
 
 .strike {
   position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
 }
 
 .strike::after {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 0;
   height: 1px;
   background: black;
   animation-name: strike;
-  animation-duration: 0.4s;
+  animation-duration: 0.1s;
   animation-timing-function: linear;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;

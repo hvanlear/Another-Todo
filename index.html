@@ -17,6 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
       rel="stylesheet"
     />
+    <link href="https://css.gg/pen.css" rel="stylesheet" />
     <link href="https://css.gg/add-r.css" rel="stylesheet" />
     <link href="https://css.gg/remove-r.css" rel="stylesheet" />
     <title>To Do</title>
@@ -41,10 +42,14 @@
     </div>
     <template
       ><li class="todo todo-item">
-        <span class="todo todo-id"></span
-        ><button class="btn btn-delete">
-          <i class="gg-remove-r"></i>
-        </button>
+        <div class="item-box">
+          <span class="todo todo-id"></span>
+          <button class="btn btn-edit"><i class="gg-pen"></i></button
+          ><button class="btn btn-delete">
+            <i class="gg-remove-r"></i>
+          </button>
+        </div>
+
         <hr /></li
     ></template>
     <script src="script.js"></script>
